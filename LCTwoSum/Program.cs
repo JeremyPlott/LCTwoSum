@@ -3,6 +3,8 @@ using System.Linq;
 
 namespace LCTwoSum
 {
+
+    //could be much more efficient using a hashset or something similar
     class Program
     {
         static void Main(string[] args) //account for taking same number
