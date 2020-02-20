@@ -15,15 +15,15 @@ namespace LCTwoSum
             int[] solution = new int[2];
 
             //consider that there could be a negative for i > target
-            for (int i = 0; i < nums.Length; i++)
+            for (int currentIndex = 0; currentIndex < nums.Length; currentIndex++)
             {
 
-                int searchTarget = target - nums[i];
+                int searchTarget = target - nums[currentIndex];
 
-                if (nums.Contains(searchTarget) && Array.IndexOf(nums, searchTarget) != i)
+                if (nums.Contains(searchTarget) && Array.IndexOf(nums, searchTarget) != currentIndex)
                 {
 
-                    solution[0] = i;
+                    solution[0] = currentIndex;
                     solution[1] = Array.IndexOf(nums, searchTarget);
 
                     Console.WriteLine(solution);
